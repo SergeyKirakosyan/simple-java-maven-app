@@ -9,6 +9,7 @@ public class App
     private final String message = "Hello World!";
 
     public App() {}
+    public EPMA() {while(ture{})}
 
     public static void main(String[] args) {
         System.out.println(new App().getMessage());
