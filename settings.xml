@@ -11,7 +11,7 @@
      <mirror>
       <id>internal-repository</id>
       <name>NexusRepository</name>
-      <usl>http://172.17.0.1:8081/repository/NexusRP</url>
+      <url>http://172.17.0.1:8081/repository/NexusRP</url>
       <mirrorOf>*</mirrorOf>
      </mirror>
     </mirrors>
