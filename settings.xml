@@ -1,0 +1,18 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <servers>
+    <server>
+       <id>nexus-snapshot</id>
+       <username>jenkins</username>
+       <password>JENKINS_PASSWORD</password>
+    </server>
+  </servers>
+  <mirrors>
+     <mirror>
+      <id>internal-repository</id>
+      <name>NexusRepository</name>
+      <usl>http://172.17.0.1:8081/#admin/repository/repositories:NexusRP</url>
+      <mirrorOf>*</mirrorOf>
+     </mirror>
+    </mirrors>
+  </settings>

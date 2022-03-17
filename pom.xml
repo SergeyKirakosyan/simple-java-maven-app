@@ -26,6 +26,16 @@
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.8.1</version>
         </plugin>
+	<plugin>
+	 <groupId>org.sonatype.plugins</groupId>
+         <artifactId>nexus-staging-maven-plugin</artifactId>
+         <version>1.6.3</version>
+         <extensions>true</extensions>
+         <configuration>
+          <serverId>nexus</serverId>
+          <nexusUrl>http://172.17.0.1:8081/</nexusUrl>
+         </configuration>
+	</plugin>
       </plugins>
     </pluginManagement>
     <plugins>
