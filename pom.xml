@@ -82,9 +82,9 @@
       <name>maven-releases</name>
       <url>http://172.17.0.1:8081/repository/maven-releases/</url>
      </repository>
-     <repository>
+     <snapshotRepository>
       <id>NexusRP</id>
       <url>http://172.17.0.1:8081/repository/maven-snapshots/</url>
-     </repository>
+     </snapshotRepository>
   </distributionManagement>
 </project>
