@@ -76,4 +76,10 @@
       </plugin>
     </plugins>
   </build>
+  <distributionManagement>
+     <snapshotRepository>
+      <id>nexus</id>
+      <url>http://172.17.0.1/repository/NexusRP/</url>
+     </snapshotRepository>
+  </distributionManagement>
 </project>
