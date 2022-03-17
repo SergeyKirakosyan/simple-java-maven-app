@@ -2,15 +2,15 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <servers>
       <server>
-         <id>nexus-snapshot</id>
+         <id>NexusRP</id>
          <username>jenkins</username>
          <password>JENKINS_PASSWORD</password>
       </server>
     </servers>
     <mirrors>
        <mirror>
-        <id>internal-repository</id>
-        <name>NexusRepository</name>
+        <id>NexusRP</id>
+        <name>NexusRP</name>
         <url>http://172.17.0.1:8081/repository/NexusRP</url>
         <mirrorOf>*</mirrorOf>
        </mirror>
