@@ -77,9 +77,12 @@
     </plugins>
   </build>
   <distributionManagement>
-     <snapshotRepository>
+     <repository>
+      <uniqueVersion>false</uniqueVersion>
       <id>NexusRP</id>
-      <url>http://172.17.0.1:8081/#browse/browse:NexusRP/</url>
-     </snapshotRepository>
+      <name>NexusRP</name>
+      <url>http://172.17.0.1:8081/repository/NexusRP</url>
+      <layout>default</layout>
+     </repository>
   </distributionManagement>
 </project>
