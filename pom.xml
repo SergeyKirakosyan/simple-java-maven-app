@@ -2,17 +2,16 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.mycompany.app</groupId>
-  <artifactId>my-app</artifactId>
+  <artifactId>${BUILD_NUMBER}</artifactId>
   <packaging>jar</packaging>
-  <version>1.1-${BUILD_NUMBER}</version>
+  <version>1</version>
   <name>my-app</name>
   <url>http://maven.apache.org</url>
   <dependencies>
-    <dependency>
+   <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.13.2</version>
-      <scope>test</scope>
     </dependency>
   </dependencies>
   <properties>
@@ -22,20 +21,20 @@
     <pluginManagement>
       <plugins>
         <plugin>
+          <groupId>org.sonatype.plugins</groupId>
+          <artifactId>nexus-staging-maven-plugin</artifactId>
+          <version>1.6.3</version>
+          <extensions>true</extensions>
+          <configuration>
+            <serverId>NexusRP</serverId>
+            <nexusUrl>http://172.17.0.1:8081/</nexusUrl>
+          </configuration>
+        </plugin>
+        <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.8.1</version>
         </plugin>
-	<plugin>
-	 <groupId>org.sonatype.plugins</groupId>
-         <artifactId>nexus-staging-maven-plugin</artifactId>
-         <version>1.6.3</version>
-         <extensions>true</extensions>
-         <configuration>
-          <serverId>NexusRP</serverId>
-          <nexusUrl>http://172.17.0.1:8081/</nexusUrl>
-         </configuration>
-	</plugin>
       </plugins>
     </pluginManagement>
     <plugins>
@@ -77,10 +76,10 @@
     </plugins>
   </build>
   <distributionManagement>
-     <repository>
-      <id>NexusRP</id>
-      <name>maven-releases</name>
-      <url>http://172.17.0.1:8081/repository/HW-NXS/</url>
+     <repository> 
+        <id>NexusRP</id>
+        <name>maven-releases</name>
+        <url>http://172.17.0.1:8081/repository/maven-releases/</url>
      </repository>
      <snapshotRepository>
       <id>NexusRP</id>

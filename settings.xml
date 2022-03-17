@@ -1,18 +1,43 @@
-<settings xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <servers>
+<settings>
+  <servers>
       <server>
          <id>NexusRP</id>
-         <username>jenkins</username>
-         <password>JENKINS_PASSWORD</password>
+         <username>${jenkins}</username>
+         <password>${JENKINS_PASSWORD}</password>
       </server>
-    </servers>
-    <mirrors>
-       <mirror>
-        <id>NexusRP</id>
-        <name>NexusRP</name>
-        <url>http://172.17.0.1:8081/repository/NexusRP</url>
-        <mirrorOf>*</mirrorOf>
-       </mirror>
-     </mirrors>
+  </servers>
+  <mirrors>
+    <mirror>
+      <id>NexusRP</id>
+      <mirrorOf>*</mirrorOf>
+      <url>http://172.17.0.1:8081/repository/NexusRP/</url>
+    </mirror>
+  </mirrors>
+  <profiles>
+    <profile>
+      <id>jenkins</id>
+      <!--Enable snapshots for the built in central repo to direct -->
+      <!--all requests to nexus via the mirror -->
+      <repositories>
+        <repository>
+          <id>central</id>
+          <url>http://central</url>
+          <releases><enabled>true</enabled></releases>
+          <snapshots><enabled>true</enabled></snapshots>
+        </repository>
+      </repositories>
+     <pluginRepositories>
+        <pluginRepository>
+          <id>central</id>
+          <url>http://central</url>
+          <releases><enabled>true</enabled></releases>
+          <snapshots><enabled>true</enabled></snapshots>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
+  </profiles>
+  <activeProfiles>
+    <!--make the profile active all the time -->
+    <activeProfile>jenkins</activeProfile>
+  </activeProfiles>
 </settings>
