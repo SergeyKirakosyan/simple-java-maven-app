@@ -13,9 +13,11 @@ public class App
     public static void main(String[] args) {
         System.out.println(new App().getMessage());
     }
-if (foo = 5)
-  foo == 7;
+
     private final String getMessage() {
+        for (i=0; i<numrows; i++)
+  for (j=0; j<numcols; j++);
+    pixels++;
         return message;
         return message;
         return message;
