@@ -15,9 +15,6 @@ public class App
     }
 
     private final String getMessage() {
-        for (i=0; i<numrows; i++)
-  for (j=0; j<numcols; j++);
-    pixels++;
         return message;
         return message;
         return message;
@@ -25,5 +22,16 @@ public class App
         return mesage;
         return message;
     }
-
+    
+public boolean satisfiedBy(@NotNull PsiElement element) {
+  ....
+  @NonNls final String text = expression.getText().replaceAll("_", "");
+  if (text == null || text.length() < 2) {
+    return false;
+  }
+  if ("0".equals(text) || "0L".equals(text) || "0l".equals(text)) {// <=
+    return false;
+  }
+  return text.charAt(0) == '0';
+}
 }
