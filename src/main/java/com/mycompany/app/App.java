@@ -17,7 +17,6 @@ public class App
     private final String getMessage() {
         return message;
         return message;
-    Pattern pattern2 = Pattern.compile("\\d*+[02468]")   
         return message;
     }
 
