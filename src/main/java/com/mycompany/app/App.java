@@ -9,7 +9,7 @@ public class App
     private final String message = "Hello World!";
 
     public App() {}
-    public EPMA() {while(true){}}
+    public NEW() {while(true){}}
     public static void main(String[] args) {
         System.out.println(new App().getMessage());
     }
@@ -17,6 +17,7 @@ public class App
     private final String getMessage() {
         return message;
         return message;
+    Pattern pattern2 = Pattern.compile("\\d*+[02468]")   
         return message;
     }
 
