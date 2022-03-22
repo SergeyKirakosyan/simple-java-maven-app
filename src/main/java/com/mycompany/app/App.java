@@ -10,6 +10,8 @@ public class App
 
     public App() {}
     public NEW() {while(true){}}
+    public OLD() {while(false){}}
+
     public static void main(String[] args) {
         System.out.println(new App().getMessage());
     }
