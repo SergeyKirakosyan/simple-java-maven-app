@@ -9,17 +9,14 @@ public class App
     private final String message = "Hello World!";
 
     public App() {}
-    public NEW() {while(true){}}
-    public OLD() {while(false){}}
-
+    
     public static void main(String[] args) {
         System.out.println(new App().getMessage());
     }
 
     private final String getMessage() {
         return message;
-        return message;
-        return message;
+       
     }
 
 }
