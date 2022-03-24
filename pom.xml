@@ -73,10 +73,10 @@
             <url>http://172.24.0.4:8081/repository/skirakasian_repo/</url>
         </repository>
         
-        <snapshotRepository>
-             <id>snapshots</id>
-            <name>Snapshots</name>
-            <url>http://192.168.99.101:8081/nexus/content/repositories/snapshots/</url>
-        <snapshotRepository>
+#        <snapshotRepository>
+#             <id>snapshots</id>
+#            <name>Snapshots</name>
+ #           <url>http://192.168.99.101:8081/nexus/content/repositories/snapshots/</url>
+ #       <snapshotRepository>
      <distributionManagement>
 </project>
