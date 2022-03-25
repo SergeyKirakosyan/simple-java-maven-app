@@ -18,6 +18,13 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+  <servers>
+      <server>
+         <id>skirakasian_repo</id>
+         <username>${jenkins}</username>
+         <password>${JENKINS_PASSWORD}</password>
+      </server>
+  </servers>
   <build>
     <pluginManagement>
       <plugins>
