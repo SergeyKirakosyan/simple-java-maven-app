@@ -7,6 +7,13 @@
   <version>1.0-SNAPSHOT</version>
   <name>my-app</name>
   <url>http://maven.apache.org</url>
+  <servers>
+      <server>
+         <id>skirakasian_repo</id>
+         <username>${jenkins}</username>
+         <password>${JENKINS_PASSWORD}</password>
+      </server>
+  </servers>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -18,13 +25,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
-  <servers>
-      <server>
-         <id>skirakasian_repo</id>
-         <username>${jenkins}</username>
-         <password>${JENKINS_PASSWORD}</password>
-      </server>
-  </servers>
+  
   <build>
     <pluginManagement>
       <plugins>
