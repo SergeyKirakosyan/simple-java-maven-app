@@ -1,0 +1,44 @@
+<settings>
+  <servers>
+      <server>
+         <id>skirakasian_repo</id>
+         <username>${jenkins}</username>
+         <password>${JENKINS_PASSWORD}</password>
+      </server>
+  </servers>
+  <mirrors>
+    <mirror>
+      <id>skirakasian_repo</id>
+      <mirrorOf>*</mirrorOf>
+      <url>http://172.24.0.3:8081/repository/skirakasian_repo/</url>
+    </mirror>
+  </mirrors>
+  <profiles>
+    <profile>
+      <id>jenkins</id>
+      <!--Enable snapshots for the built in central repo to direct -->
+      <!--all requests to nexus via the mirror -->
+      <repositories>
+        <repository>
+          <id>central</id>
+          <url>http://central</url>
+          <releases><enabled>true</enabled></releases>
+          <snapshots><enabled>true</enabled></snapshots>
+        </repository>
+      </repositories>
+     <pluginRepositories>
+        <pluginRepository>
+          <id>central</id>
+          <url>http://central</url>
+          <releases><enabled>true</enabled></releases>
+          <snapshots><enabled>true</enabled></snapshots>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
+  </profiles>
+  <activeProfiles>
+    <!--make the profile active all the time -->
+    <activeProfile>jenkins</activeProfile>
+  </activeProfiles>
+</settings>
+
