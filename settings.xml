@@ -3,7 +3,7 @@
       <server>
          <id>skirakasian_repo</id>
          <username>${nexuser}</username>
-         <password>${NEXUSER_PASSWORD}</password>
+         <password>${nexuser_password}</password>
       </server>
   </servers>
   <mirrors>
