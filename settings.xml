@@ -2,8 +2,8 @@
   <servers>
       <server>
          <id>skirakasian_repo</id>
-         <username>${nexuser}</username>
-         <password>${NEXUSER_PASSWORD}</password>
+         <username>nexuser</username>
+         <password>FIGhter2</password>
       </server>
   </servers>
   <mirrors>
